@@ -19,7 +19,7 @@ Create a `compose.yaml` file:
 ```yaml
 services:
   8mblocal:
-    image: ghcr.io/abduznik/8mblocal-host:main
+    image: ghcr.io/abduznik/8mblocal-host:master
     container_name: 8mblocal
     ports:
       - "8080:80"
@@ -38,7 +38,7 @@ docker compose up -d
 docker run -d \
   --name 8mblocal \
   -p 8080:80 \
-  ghcr.io/abduznik/8mblocal-host:main
+  ghcr.io/abduznik/8mblocal-host:master
 ```
 
 ## Configuration
