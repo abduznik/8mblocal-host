@@ -1,10 +1,7 @@
 services:
   8mblocal:
-    image: nginx:alpine
+    image: ghcr.io/abduznik/8mblocal-host:main
     container_name: 8mblocal
     ports:
       - "7002:80"          # Use port 7002 as previously established
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./public:/usr/share/nginx/html:ro
     restart: unless-stopped

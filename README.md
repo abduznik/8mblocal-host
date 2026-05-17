@@ -19,13 +19,10 @@ Create a `compose.yaml` file:
 ```yaml
 services:
   8mblocal:
-    image: nginx:alpine
+    image: ghcr.io/abduznik/8mblocal-host:main
     container_name: 8mblocal
     ports:
       - "8080:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./public:/usr/share/nginx/html:ro
     restart: unless-stopped
 ```
 
@@ -38,7 +35,10 @@ docker compose up -d
 ### Manual Run
 
 ```bash
-docker run -d   --name 8mblocal   -p 8080:80   -v $(pwd)/public:/usr/share/nginx/html:ro   -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro   nginx:alpine
+docker run -d \
+  --name 8mblocal \
+  -p 8080:80 \
+  ghcr.io/abduznik/8mblocal-host:main
 ```
 
 ## Configuration
