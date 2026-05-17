@@ -1,6 +1,9 @@
 # 8mblocal-host
 
-A local-first, browser-based video compressor designed for speed and privacy. This project hosts a static interface that utilizes FFmpeg.wasm to perform video compression entirely within the user's browser memory.
+**[🚀 Live Demo](https://abduznik.github.io/8mblocal-host/)**
+
+A local-first, browser-based video compressor designed for speed and privacy.
+ This project hosts a static interface that utilizes FFmpeg.wasm to perform video compression entirely within the user's browser memory.
 
 ## Features
 
