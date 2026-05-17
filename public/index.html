@@ -423,8 +423,8 @@
 
 <script type="module">
   // ── Load FFmpeg from local self-hosted folders ────────────────────────────
-  import { FFmpeg } from '/ffmpeg/ffmpeg.js';
-  import { fetchFile, toBlobURL } from '/util/index.js';
+  import { FFmpeg } from './ffmpeg/ffmpeg.js';
+  import { fetchFile, toBlobURL } from './util/index.js';
 
   const ffmpeg = new FFmpeg();
   let loaded = false;
@@ -472,9 +472,9 @@
   async function loadFFmpeg() {
     setStatus('busy', 'LOADING FFMPEG ENGINE...');
     try {
-      const coreURL   = await toBlobURL('/core/ffmpeg-core.js',  'text/javascript');
-      const wasmURL   = await toBlobURL('/core/ffmpeg-core.wasm', 'application/wasm');
-      const workerURL = await toBlobURL('/ffmpeg/worker.js',       'text/javascript');
+      const coreURL   = await toBlobURL('./core/ffmpeg-core.js',  'text/javascript');
+      const wasmURL   = await toBlobURL('./core/ffmpeg-core.wasm', 'application/wasm');
+      const workerURL = await toBlobURL('./ffmpeg/worker.js',       'text/javascript');
 
       ffmpeg.on('log', ({ message }) => {
         log(message);
