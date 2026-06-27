@@ -1,3 +1,13 @@
+
+## Support This Project
+
+> **All projects made with passion** 💙
+
+Your support helps us continue developing and maintaining these projects. Consider sponsoring to help keep them alive!
+
+<iframe src="https://github.com/sponsors/abduznik/card" title="Sponsor abduznik" height="225" width="600" style="border: 0;"></iframe>
+
+
 # 8mblocal-host
 
 **[🚀 Live Demo](https://abduznik.github.io/8mblocal-host/)**
